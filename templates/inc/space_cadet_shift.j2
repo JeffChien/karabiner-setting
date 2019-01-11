@@ -1,0 +1,16 @@
+- description: space cadet shift
+  manipulators:
+    {%- for from_keycode, to_keycode in space_cadet_mapping.items() %}
+    - type: basic
+      from:
+          key_code: '{{from_keycode}}'
+          modifiers:
+              optional:
+                  - any
+      to:
+          - key_code: '{{from_keycode}}'
+      to_if_alone:
+          - key_code: '{{to_keycode}}'
+            modifiers:
+                - shift
+    {% endfor -%}

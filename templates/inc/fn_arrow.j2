@@ -1,0 +1,25 @@
+- description: fn arrow
+  manipulators:
+  {% for key in fn_arrow.keys_hold_as_fn %}
+    - type: basic
+      from:
+        key_code: '{{key}}'
+        modifiers:
+            optional:
+                  - any
+      to_if_alone:
+          - key_code: '{{key}}'
+
+      to_if_held_down:
+          - key_code: 'fn'
+  {% endfor %}
+  {% for to_key, from_key in fn_arrow.keycode_mapping.items() %}
+    - type: basic
+      from:
+          key_code: '{{from_key}}'
+          modifiers:
+              mandatory:
+                  - fn
+      to:
+          - key_code: '{{to_key}}'
+  {% endfor %}

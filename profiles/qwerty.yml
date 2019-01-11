@@ -1,0 +1,74 @@
+---
+meta:
+    name: some qmk features.
+
+space_cadet_mapping:
+    left_shift: '6'
+    right_shift: backslash
+
+fn_arrow:
+    keycode_mapping:
+        left_arrow: 'h'
+        down_arrow: 'j'
+        up_arrow: 'k'
+        right_arrow: 'l'
+        home: 'y'
+        page_down: 'u'
+        page_up: 'i'
+        end: 'o'
+
+    keys_hold_as_fn:
+        - tab
+
+autoshift:
+    keycode:
+        numerics:
+            - '0'
+            - '1'
+            - '2'
+            - '3'
+            - '4'
+            - '5'
+            - '6'
+            - '7'
+            - '8'
+            - '9'
+        specials:
+            - grave_accent_and_tilde
+            - hyphen
+            - equal_sign
+            - open_bracket
+            - close_bracket
+            - backslash
+            - semicolon
+            - quote
+            - comma
+            - period
+            - slash
+        alphas:
+            - q
+            - w
+            - e
+            - r
+            - t
+            - y
+            - u
+            - i
+            - o
+            - p
+            - a
+            - s
+            - d
+            - f
+            - g
+            - h
+            - j
+            - k
+            - l
+            - z
+            - x
+            - c
+            - v
+            - b
+            - n
+            - m

@@ -1,0 +1,32 @@
+{%- macro gen_autoshift(keycodes) -%}
+    manipulators:
+    {%- for keycode in keycodes %}
+      - type: basic
+        from:
+            key_code: '{{keycode}}'
+            modifiers:
+                optional:
+                    - any
+        to_if_alone:
+            - key_code: '{{keycode}}'
+              halt: true
+
+        to_if_held_down:
+            - key_code: '{{keycode}}'
+              modifiers:
+                  - shift
+              repeat: false
+        to_delayed_action:
+            to_if_canceled:
+                - key_code: '{{keycode}}'
+                  halt: true
+
+    {% endfor %}
+{%- endmacro -%}
+
+- description: autoshift numeric only
+  {{ gen_autoshift(autoshift.keycode.numerics) }}
+- description: autoshift special only
+  {{ gen_autoshift(autoshift.keycode.specials) }}
+- description: autoshift alpha only
+  {{ gen_autoshift(autoshift.keycode.alphas) }}
