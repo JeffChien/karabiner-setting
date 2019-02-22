@@ -1,6 +1,6 @@
 ---
 meta:
-    name: some qmk features dvorak.
+    name: some qmk features and personal settings in dvorak layout.
 
 space_cadet_mapping:
     left_shift: '6'
