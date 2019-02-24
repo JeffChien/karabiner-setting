@@ -6,6 +6,7 @@ My presonal settings with some handy qmk features.
 - hold `tab + hjkl` as arrow key.
 - hold `tab + yuio` as `home/page down/page up/end` 
 - swap `backslash` and `delete` like hhkb layout. this rule must place before any autoshift rule.
+- spacebar as alt when hold.
 
 Since karabiner always use qwerty layout, to support dvorak keyboard layout, need to create new profile setting.
 

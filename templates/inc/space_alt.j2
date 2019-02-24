@@ -1,0 +1,13 @@
+- description: space as alt if hold
+  manipulators:
+    - type: basic
+      from:
+        key_code: 'spacebar'
+        modifiers:
+            optional:
+                  - any
+      to_if_alone:
+          - key_code: 'spacebar'
+
+      to_if_held_down:
+          - key_code: 'left_alt'
