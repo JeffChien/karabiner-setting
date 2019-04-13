@@ -32,6 +32,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -48,6 +51,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -64,6 +70,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -80,6 +89,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -96,6 +108,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -112,6 +127,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -128,6 +146,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -144,6 +165,9 @@
             "modifiers": {
               "mandatory": [
                 "fn"
+              ],
+              "optional": [
+                "any"
               ]
             }
           },
@@ -209,43 +233,6 @@
       ]
     },
     {
-      "description": "swap backslash and delete. hhkb like.",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "delete_or_backspace",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "backslash"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "description": "space as alt if hold",
       "manipulators": [
         {
@@ -267,7 +254,14 @@
             {
               "key_code": "left_alt"
             }
-          ]
+          ],
+          "to_delayed_action": {
+            "to_if_canceled": [
+              {
+                "key_code": "left_alt"
+              }
+            ]
+          }
         }
       ]
     },

@@ -6,7 +6,7 @@
         key_code: '{{key}}'
         modifiers:
             optional:
-                  - any
+                  - 'any'
       to_if_alone:
           - key_code: '{{key}}'
 
@@ -19,7 +19,9 @@
           key_code: '{{from_key}}'
           modifiers:
               mandatory:
-                  - fn
+                  - 'fn'
+              optional:
+                  - 'any'
       to:
           - key_code: '{{to_key}}'
   {% endfor %}
